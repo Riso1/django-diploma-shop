@@ -1,0 +1,981 @@
+[
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Администратор",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Покупатель",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$coWyK7yYn9TWF1SkPa7Zpf$qA1Dt2ROkD89xKwj/bi7HceIAbVCseGzBxjQESYl9jM=",
+    "last_login": "2026-06-25T04:24:53.928Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-06-25T04:24:42.275Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ZXKcadtBjVyKAYTa0sDLjQ$yeekPQzgD8Vgb9CKk0ig/GeNLrRA2X1t25B0ymSKkHU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ivan",
+    "first_name": "Иван",
+    "last_name": "Петров",
+    "email": "ivan@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-25T04:30:08.439Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$tsXizloJgpVQ0Lm1sxKimQ$uXKnDMcw4vaguutDt3IvpvBq1d0r4F2ZD5AX+X/kLF0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "anna",
+    "first_name": "Анна",
+    "last_name": "Смирнова",
+    "email": "anna@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-06-25T04:30:08.906Z",
+    "groups": [
+      2
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "full_name": "Иван Петров",
+    "phone": "+79000000001",
+    "avatar": "",
+    "created_at": "2026-06-25T04:30:08.441Z",
+    "updated_at": "2026-06-25T04:30:08.903Z"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 2,
+  "fields": {
+    "user": 3,
+    "full_name": "Анна Смирнова",
+    "phone": "+79000000002",
+    "avatar": "",
+    "created_at": "2026-06-25T04:30:08.908Z",
+    "updated_at": "2026-06-25T04:30:09.360Z"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "title": "Электроника",
+    "parent": null,
+    "image": "",
+    "is_active": true,
+    "sort_index": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "title": "Смартфоны",
+    "parent": 1,
+    "image": "",
+    "is_active": true,
+    "sort_index": 1
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "title": "Ноутбуки",
+    "parent": 1,
+    "image": "",
+    "is_active": true,
+    "sort_index": 2
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "title": "Аксессуары",
+    "parent": 1,
+    "image": "",
+    "is_active": true,
+    "sort_index": 3
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "title": "Телевизоры",
+    "parent": 1,
+    "image": "",
+    "is_active": true,
+    "sort_index": 4
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Новинка",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 2,
+  "fields": {
+    "name": "Хит продаж",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 3,
+  "fields": {
+    "name": "Скидка",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 4,
+  "fields": {
+    "name": "Игровое",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 5,
+  "fields": {
+    "name": "Для дома",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.tag",
+  "pk": 6,
+  "fields": {
+    "name": "Ограниченный тираж",
+    "categories": [
+      2,
+      1,
+      3,
+      4,
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 2,
+    "title": "Смартфон Nova X",
+    "description": "Смартфон Nova X: краткое описание товара для каталога.",
+    "full_description": "Смартфон Nova X: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "34990.00",
+    "count": 15,
+    "free_delivery": true,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 1,
+    "purchases_count": 120,
+    "rating": "4.80",
+    "created_at": "2026-06-25T04:30:09.415Z",
+    "updated_at": "2026-06-25T04:30:09.415Z",
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 2,
+    "title": "Смартфон PixelPro 12",
+    "description": "Смартфон PixelPro 12: краткое описание товара для каталога.",
+    "full_description": "Смартфон PixelPro 12: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "52990.00",
+    "count": 8,
+    "free_delivery": true,
+    "limited_edition": true,
+    "is_active": true,
+    "sort_index": 2,
+    "purchases_count": 98,
+    "rating": "4.70",
+    "created_at": "2026-06-25T04:30:09.430Z",
+    "updated_at": "2026-06-25T04:30:09.430Z",
+    "tags": [
+      6,
+      2
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 3,
+    "title": "Ноутбук SkillBook 14",
+    "description": "Ноутбук SkillBook 14: краткое описание товара для каталога.",
+    "full_description": "Ноутбук SkillBook 14: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "74990.00",
+    "count": 6,
+    "free_delivery": true,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 3,
+    "purchases_count": 75,
+    "rating": "4.60",
+    "created_at": "2026-06-25T04:30:09.446Z",
+    "updated_at": "2026-06-25T04:30:09.446Z",
+    "tags": [
+      5,
+      1
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 3,
+    "title": "Игровой ноутбук Dragon 15",
+    "description": "Игровой ноутбук Dragon 15: краткое описание товара для каталога.",
+    "full_description": "Игровой ноутбук Dragon 15: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "119990.00",
+    "count": 4,
+    "free_delivery": true,
+    "limited_edition": true,
+    "is_active": true,
+    "sort_index": 4,
+    "purchases_count": 64,
+    "rating": "4.90",
+    "created_at": "2026-06-25T04:30:09.463Z",
+    "updated_at": "2026-06-25T04:30:09.463Z",
+    "tags": [
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 4,
+    "title": "Беспроводные наушники AirSound",
+    "description": "Беспроводные наушники AirSound: краткое описание товара для каталога.",
+    "full_description": "Беспроводные наушники AirSound: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "7990.00",
+    "count": 25,
+    "free_delivery": false,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 5,
+    "purchases_count": 150,
+    "rating": "4.50",
+    "created_at": "2026-06-25T04:30:09.480Z",
+    "updated_at": "2026-06-25T04:30:09.480Z",
+    "tags": [
+      3,
+      2
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 4,
+    "title": "Мышь GameClick Pro",
+    "description": "Мышь GameClick Pro: краткое описание товара для каталога.",
+    "full_description": "Мышь GameClick Pro: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "2990.00",
+    "count": 40,
+    "free_delivery": false,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 6,
+    "purchases_count": 180,
+    "rating": "4.40",
+    "created_at": "2026-06-25T04:30:09.497Z",
+    "updated_at": "2026-06-25T04:30:09.497Z",
+    "tags": [
+      4,
+      2
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 4,
+    "title": "Клавиатура OfficeType",
+    "description": "Клавиатура OfficeType: краткое описание товара для каталога.",
+    "full_description": "Клавиатура OfficeType: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "4590.00",
+    "count": 30,
+    "free_delivery": false,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 7,
+    "purchases_count": 90,
+    "rating": "4.30",
+    "created_at": "2026-06-25T04:30:09.513Z",
+    "updated_at": "2026-06-25T04:30:09.513Z",
+    "tags": [
+      5
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 5,
+    "title": "Телевизор Vision 55",
+    "description": "Телевизор Vision 55: краткое описание товара для каталога.",
+    "full_description": "Телевизор Vision 55: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "57990.00",
+    "count": 7,
+    "free_delivery": true,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 8,
+    "purchases_count": 70,
+    "rating": "4.60",
+    "created_at": "2026-06-25T04:30:09.528Z",
+    "updated_at": "2026-06-25T04:30:09.528Z",
+    "tags": [
+      5,
+      3
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 5,
+    "title": "Телевизор CinemaMax 65",
+    "description": "Телевизор CinemaMax 65: краткое описание товара для каталога.",
+    "full_description": "Телевизор CinemaMax 65: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "89990.00",
+    "count": 3,
+    "free_delivery": true,
+    "limited_edition": true,
+    "is_active": true,
+    "sort_index": 9,
+    "purchases_count": 55,
+    "rating": "4.80",
+    "created_at": "2026-06-25T04:30:09.546Z",
+    "updated_at": "2026-06-25T04:30:09.546Z",
+    "tags": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "category": 4,
+    "title": "Внешний SSD FastDrive 1TB",
+    "description": "Внешний SSD FastDrive 1TB: краткое описание товара для каталога.",
+    "full_description": "Внешний SSD FastDrive 1TB: подробное описание товара для детальной страницы. Подходит для демонстрации каталога, корзины и оформления заказа.",
+    "price": "9990.00",
+    "count": 18,
+    "free_delivery": false,
+    "limited_edition": false,
+    "is_active": true,
+    "sort_index": 10,
+    "purchases_count": 110,
+    "rating": "4.70",
+    "created_at": "2026-06-25T04:30:09.564Z",
+    "updated_at": "2026-06-25T04:30:09.564Z",
+    "tags": [
+      1
+    ]
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "name": "Производитель",
+    "value": "NovaTech"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 2,
+  "fields": {
+    "product": 1,
+    "name": "Память",
+    "value": "128 ГБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 3,
+  "fields": {
+    "product": 1,
+    "name": "Цвет",
+    "value": "Чёрный"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 4,
+  "fields": {
+    "product": 2,
+    "name": "Производитель",
+    "value": "PixelPro"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 5,
+  "fields": {
+    "product": 2,
+    "name": "Память",
+    "value": "256 ГБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 6,
+  "fields": {
+    "product": 2,
+    "name": "Цвет",
+    "value": "Синий"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 7,
+  "fields": {
+    "product": 3,
+    "name": "Производитель",
+    "value": "SkillBook"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 8,
+  "fields": {
+    "product": 3,
+    "name": "ОЗУ",
+    "value": "16 ГБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 9,
+  "fields": {
+    "product": 3,
+    "name": "SSD",
+    "value": "512 ГБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 10,
+  "fields": {
+    "product": 4,
+    "name": "Производитель",
+    "value": "Dragon"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 11,
+  "fields": {
+    "product": 4,
+    "name": "ОЗУ",
+    "value": "32 ГБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 12,
+  "fields": {
+    "product": 4,
+    "name": "SSD",
+    "value": "1 ТБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 13,
+  "fields": {
+    "product": 5,
+    "name": "Производитель",
+    "value": "AirSound"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 14,
+  "fields": {
+    "product": 5,
+    "name": "Тип",
+    "value": "Bluetooth"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 15,
+  "fields": {
+    "product": 5,
+    "name": "Цвет",
+    "value": "Белый"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 16,
+  "fields": {
+    "product": 6,
+    "name": "Производитель",
+    "value": "GameClick"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 17,
+  "fields": {
+    "product": 6,
+    "name": "Тип",
+    "value": "Проводная"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 18,
+  "fields": {
+    "product": 6,
+    "name": "Цвет",
+    "value": "Чёрный"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 19,
+  "fields": {
+    "product": 7,
+    "name": "Производитель",
+    "value": "OfficeType"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 20,
+  "fields": {
+    "product": 7,
+    "name": "Тип",
+    "value": "Мембранная"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 21,
+  "fields": {
+    "product": 7,
+    "name": "Цвет",
+    "value": "Серый"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 22,
+  "fields": {
+    "product": 8,
+    "name": "Производитель",
+    "value": "Vision"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 23,
+  "fields": {
+    "product": 8,
+    "name": "Диагональ",
+    "value": "55"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 24,
+  "fields": {
+    "product": 8,
+    "name": "Разрешение",
+    "value": "4K"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 25,
+  "fields": {
+    "product": 9,
+    "name": "Производитель",
+    "value": "CinemaMax"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 26,
+  "fields": {
+    "product": 9,
+    "name": "Диагональ",
+    "value": "65"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 27,
+  "fields": {
+    "product": 9,
+    "name": "Разрешение",
+    "value": "4K"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 28,
+  "fields": {
+    "product": 10,
+    "name": "Производитель",
+    "value": "FastDrive"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 29,
+  "fields": {
+    "product": 10,
+    "name": "Объём",
+    "value": "1 ТБ"
+  }
+},
+{
+  "model": "shop.productspecification",
+  "pk": 30,
+  "fields": {
+    "product": 10,
+    "name": "Интерфейс",
+    "value": "USB-C"
+  }
+},
+{
+  "model": "shop.productreview",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "user": 2,
+    "author": "Иван Петров",
+    "email": "ivan@example.com",
+    "text": "Хороший смартфон, быстро работает и удобно лежит в руке.",
+    "rate": 5,
+    "is_active": true,
+    "created_at": "2026-06-25T04:30:09.590Z"
+  }
+},
+{
+  "model": "shop.productreview",
+  "pk": 2,
+  "fields": {
+    "product": 3,
+    "user": 3,
+    "author": "Анна Смирнова",
+    "email": "anna@example.com",
+    "text": "Ноутбук подошёл для работы и учёбы, экран приятный.",
+    "rate": 4,
+    "is_active": true,
+    "created_at": "2026-06-25T04:30:09.593Z"
+  }
+},
+{
+  "model": "shop.productreview",
+  "pk": 3,
+  "fields": {
+    "product": 6,
+    "user": 2,
+    "author": "Иван Петров",
+    "email": "ivan@example.com",
+    "text": "Мышь удобная, для игр и обычной работы хватает.",
+    "rate": 5,
+    "is_active": true,
+    "created_at": "2026-06-25T04:30:09.597Z"
+  }
+},
+{
+  "model": "shop.sale",
+  "pk": 1,
+  "fields": {
+    "product": 5,
+    "sale_price": "6490.00",
+    "date_from": "2026-06-01",
+    "date_to": "2026-07-15",
+    "is_active": true
+  }
+},
+{
+  "model": "shop.sale",
+  "pk": 2,
+  "fields": {
+    "product": 8,
+    "sale_price": "52990.00",
+    "date_from": "2026-06-01",
+    "date_to": "2026-07-15",
+    "is_active": true
+  }
+},
+{
+  "model": "orders.deliverysettings",
+  "pk": 1,
+  "fields": {
+    "express_delivery_price": "500.00",
+    "free_delivery_threshold": "2000.00",
+    "standard_delivery_price": "200.00"
+  }
+},
+{
+  "model": "orders.basket",
+  "pk": 1,
+  "fields": {
+    "user": 2,
+    "session_key": "",
+    "created_at": "2026-06-25T04:30:09.601Z",
+    "updated_at": "2026-06-25T04:30:09.601Z"
+  }
+},
+{
+  "model": "orders.basketitem",
+  "pk": 1,
+  "fields": {
+    "basket": 1,
+    "product": 1,
+    "count": 1
+  }
+},
+{
+  "model": "orders.basketitem",
+  "pk": 2,
+  "fields": {
+    "basket": 1,
+    "product": 6,
+    "count": 2
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "user": 2,
+    "full_name": "Иван Петров",
+    "email": "ivan@example.com",
+    "phone": "",
+    "delivery_type": "ordinary",
+    "payment_type": "online",
+    "city": "Омск",
+    "address": "ул. Учебная, д. 1",
+    "comment": "Демо-заказ для проверки интернет-магазина",
+    "total_cost": "37980.00",
+    "delivery_cost": "0.00",
+    "status": "paid",
+    "payment_error": "",
+    "created_at": "2026-06-25T04:30:09.611Z",
+    "updated_at": "2026-06-25T04:30:09.611Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "is_deleted": false,
+    "deleted_at": null,
+    "user": 3,
+    "full_name": "Анна Смирнова",
+    "email": "anna@example.com",
+    "phone": "",
+    "delivery_type": "express",
+    "payment_type": "someone",
+    "city": "Омск",
+    "address": "ул. Учебная, д. 1",
+    "comment": "Демо-заказ для проверки интернет-магазина",
+    "total_cost": "8490.00",
+    "delivery_cost": "500.00",
+    "status": "payment_error",
+    "payment_error": "Платёжная система отклонила оплату.",
+    "created_at": "2026-06-25T04:30:09.623Z",
+    "updated_at": "2026-06-25T04:30:09.623Z"
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 1,
+    "product_title": "Смартфон Nova X",
+    "price": "34990.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 2,
+  "fields": {
+    "order": 1,
+    "product": 6,
+    "product_title": "Мышь GameClick Pro",
+    "price": "2990.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.orderitem",
+  "pk": 3,
+  "fields": {
+    "order": 2,
+    "product": 5,
+    "product_title": "Беспроводные наушники AirSound",
+    "price": "7990.00",
+    "count": 1
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "number": "24682468",
+    "status": "success",
+    "error": "",
+    "created_at": "2026-06-25T04:30:09.620Z"
+  }
+},
+{
+  "model": "orders.payment",
+  "pk": 2,
+  "fields": {
+    "order": 2,
+    "number": "12345670",
+    "status": "error",
+    "error": "Платёжная система отклонила оплату.",
+    "created_at": "2026-06-25T04:30:09.628Z"
+  }
+}
+]
